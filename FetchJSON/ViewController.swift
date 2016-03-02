@@ -87,7 +87,8 @@ class ViewController: UIViewController
                         return
                     }
                 }
-
+                
+                // Check the HTTP status code
                 if let response = response as? NSHTTPURLResponse where response.statusCode >= 200 && response.statusCode < 300
                 {
                     completion(responseObject: responseObject, error: nil)
